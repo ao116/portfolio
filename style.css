@@ -430,3 +430,28 @@ footer {
 footer p {
   text-align: center;
 }
+
+
+#publications {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.publication-card {
+  width: 80%;
+  margin: 1.5rem auto;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.publication-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.publication-card p {
+  color: #555;
+  line-height: 1.6;
+}

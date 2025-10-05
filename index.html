@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alireza Orouji — Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <!-- NAV (Desktop) -->
     <nav id="desktop-nav">
       <div class="logo">Alireza Orouji</div>
       <div>
@@ -19,13 +21,13 @@
         </ul>
       </div>
     </nav>
+
+    <!-- NAV (Mobile) -->
     <nav id="hamburger-nav">
       <div class="logo">Alireza Orouji</div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </div>
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
@@ -35,6 +37,247 @@
         </div>
       </div>
     </nav>
+
+    <!-- HERO / PROFILE -->
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Alireza Orouji profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Alireza Orouji</h1>
+        <p class="section__text__p2">Data Scientist & ML/NLP Engineer</p>
+        <div class="btn-container">
+          <button class="btn btn-color-2" onclick="window.open('./assets/Alireza_cv.pdf')">Download CV</button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/alireza-orouji-977119229'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="GitHub"
+            class="icon"
+            onclick="location.href='http://github.com/ao116'"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img src="./assets/about-pic.png" alt="About picture" class="about-pic" />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+              <h3>Experience</h3>
+              <p>Data Analyst • Teaching Assistant • SWE Intern</p>
+            </div>
+            <div class="details-container">
+              <img src="./assets/education.png" alt="Education icon" class="icon" />
+              <h3>Education</h3>
+              <p>B.Sc. Computer Science — Amirkabir University of Technology (AUT)</p>
+              <p>GPA: 3.80/4 (18.51/20)</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              I’m a data-driven problem solver focused on machine learning, NLP, and
+              generative AI. I’ve built end-to-end projects (data collection,
+              modeling, evaluation, and deployment) and contributed as a Teaching
+              Assistant across AI, Data Mining, Software Design, and Compiler courses.
+              Recently, I worked as a Data Analyst at Tabdeal, streamlining reports,
+              building SQL-based insights, and collaborating cross-functionally to drive
+              decisions. I love turning messy data into clear, usable products.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <!-- Skills Column 1 -->
+          <div class="details-container">
+            <h2 class="experience-sub-title">Data & ML</h2>
+            <div class="article-container">
+              <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>Python</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>PyTorch</h3><p>Intermediate</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>scikit-learn</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>TensorFlow</h3><p>Intermediate</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>Hugging Face</h3><p>Intermediate</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>LangChain</h3><p>Intermediate</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>Pandas & NumPy</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>Matplotlib & Seaborn</h3><p>Experienced</p></div></article>
+            </div>
+          </div>
+
+          <!-- Skills Column 2 -->
+          <div class="details-container">
+            <h2 class="experience-sub-title">Data Engineering & Tools</h2>
+            <div class="article-container">
+              <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>SQL (PostgreSQL/MySQL/SQLite)</h3><p>Intermediate</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>Git & GitHub</h3><p>Intermediate</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>Jupyter Notebook</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>C++</h3><p>Intermediate</p></div></article>
+            </div>
+          </div>
+        </div>
+
+        <!-- Roles -->
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Recent Roles</h2>
+            <div class="article-container" style="gap:1.25rem;">
+              <article style="width:100%;">
+                <div>
+                  <h3>Data Analyst — Tabdeal</h3>
+                  <p>Fall 2024 – Spring 2025 · SQL reporting, workflow analytics, stakeholder collaboration</p>
+                </div>
+              </article>
+              <article style="width:100%;">
+                <div>
+                  <h3>Teaching Assistant (AUT & Sharif)</h3>
+                  <p>AI, Data Mining, Software Design, Compiler · 2024</p>
+                </div>
+              </article>
+              <article style="width:100%;">
+                <div>
+                  <h3>Software Engineer Intern — NamaadIran</h3>
+                  <p>Summer 2023 · .NET 3-layer app, MySQL integration</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <!-- Project 1 -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-1.png" alt="Subtitle Translator" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">English→Persian Subtitle Translator</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ao116'">Github</button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ao116'">Docs</button>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-2.png" alt="Credit Card Fraud Detection" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Credit Card Fraud Detection</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ao116/Credit-Card-Fraud-Detection'">Github</button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ao116/Credit-Card-Fraud-Detection'">Readme</button>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-3.png" alt="Pac-Man AI" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Pac-Man with AI (Minimax/Alpha-Beta)</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ao116/Pac-Man'">Github</button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ao116/Pac-Man'">Readme</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Extra links row (optional) -->
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <h2 class="experience-sub-title project-title">More Projects</h2>
+            <div class="btn-container" style="flex-wrap:wrap; justify-content:flex-start;">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ao116/Rainfall-Predictor'">Rainfall Predictor</button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ao116/Data-Base'">Online Shop DB</button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ao116/AI/blob/main/kakuro/kakuro.py'">Kakuro Solver</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+    </section>
+
+    <section id="publications">
+      <h1 class="section-title">Publications</h1>
+      <div class="publication-card">
+        <h2>Data Balancing Strategies: A Survey of Resampling and Augmentation Methods</h2>
+        <p>Comprehensive survey of ~80 techniques addressing class imbalance in classification. 
+        Includes empirical evaluation and comparative performance results.</p>
+        <a href="https://scholar.google.com/citations?view_op=list_works&user=ft9N2TQAAAAJ" target="_blank">View on Google Scholar</a>
+      </div>
+      
+      <div class="publication-card">
+        <h2>A Comprehensive Benchmarking and Evaluation Framework for Measuring the Performance of LLMs in Open-Ended Medical QA</h2>
+        <p>Introduces MedicineQuAD (8,796 QA pairs) and 14 complementary metrics for multi-dimensional LLM evaluation.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+          <p><a href="mailto:alireza.orouji11@gmail.com">alireza.orouji11@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+          <p><a href="https://www.linkedin.com/in/alireza-orouji-977119229">LinkedIn</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/github.png" alt="GitHub icon" class="icon contact-icon" />
+          <p><a href="https://github.com/ao116">GitHub</a></p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 Alireza Orouji. All Rights Reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
